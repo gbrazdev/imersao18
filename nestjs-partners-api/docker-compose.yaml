@@ -9,7 +9,7 @@ services:
       - .:/home/node/app
 
   db:
-    image: mysql:8.0.30-debian
+    image: mysql:8.0.37-debian
     environment:
       MYSQL_ROOT_PASSWORD: root
     ports:
