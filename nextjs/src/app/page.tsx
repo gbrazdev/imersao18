@@ -1,6 +1,6 @@
-import { Title } from "./components/Title";
-import { EventModel } from "./models";
-import { EventCard } from "./components/EventCard";
+import { Title } from "../components/Title";
+import { EventModel } from "../models";
+import { EventCard } from "../components/EventCard";
 
 export async function getEvents(): Promise<EventModel[]> {
   const response = await fetch("http://localhost:8080/events", {
