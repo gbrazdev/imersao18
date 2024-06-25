@@ -26,6 +26,9 @@ npm run migrate:partner1
 // executar a migração do segundo parceiro:
 npm run migrate:partner2
 
+// caso queira rodar as fixtures para copular com exemplos:
+npm run partner1-fixture
+
 // Executar o partner1 na porta 3000
 npm run start:dev
 
