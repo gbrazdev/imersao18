@@ -3,7 +3,7 @@ package usecase
 import (
 	"fmt"
 
-	"golang/internal/events/domain"
+	"github.com/devfullcycle/imersao18/golang/internal/events/domain"
 )
 
 type CreateSpotsInputDTO struct {

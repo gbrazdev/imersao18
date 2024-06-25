@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"golang/internal/events/domain"
+	"github.com/devfullcycle/imersao18/golang/internal/events/domain"
 )
 
 type GetEventInputDTO struct {

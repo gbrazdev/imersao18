@@ -315,7 +315,7 @@ const docTemplate = `{
                         "type": "string"
                     }
                 },
-                "ticket_type": {
+                "ticket_kind": {
                     "type": "string"
                 }
             }
@@ -536,7 +536,7 @@ const docTemplate = `{
                 "spot_id": {
                     "type": "string"
                 },
-                "ticket_type": {
+                "ticket_kind": {
                     "type": "string"
                 }
             }
@@ -554,8 +554,8 @@ var SwaggerInfo = &swag.Spec{
 	Description:      "This is a server for managing events. Imersão Full Cycle",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
-	// LeftDelim:        "{{",
-	// RightDelim:       "}}",
+	LeftDelim:        "{{",
+	RightDelim:       "}}",
 }
 
 func init() {

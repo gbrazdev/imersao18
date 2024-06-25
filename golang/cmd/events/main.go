@@ -12,12 +12,11 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 
-	_ "golang/docs" // Import the generated docs
-	httpHandler "golang/internal/events/infra/http"
-	"golang/internal/events/infra/repository"
-	"golang/internal/events/infra/service"
-	"golang/internal/events/usecase"
-
+	_ "github.com/devfullcycle/imersao18/golang/docs" // Import the generated docs
+	httpHandler "github.com/devfullcycle/imersao18/golang/internal/events/infra/http"
+	"github.com/devfullcycle/imersao18/golang/internal/events/infra/repository"
+	"github.com/devfullcycle/imersao18/golang/internal/events/infra/service"
+	"github.com/devfullcycle/imersao18/golang/internal/events/usecase"
 	httpSwagger "github.com/swaggo/http-swagger"
 )
 
@@ -28,7 +27,7 @@ import (
 // @BasePath /
 func main() {
 	// Configuração do banco de dados
-	db, err := sql.Open("mysql", "test_user:test_password@tcp(localhost:3306)/test_db")
+	db, err := sql.Open("mysql", "test_user:test_password@tcp(golang-mysql:3306)/test_db")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -42,8 +41,8 @@ func main() {
 
 	// URLs base específicas para cada parceiro
 	partnerBaseURLs := map[int]string{
-		1: "http://localhost:9000/api1",
-		2: "http://localhost:9000/api2",
+		1: "http://host.docker.internal:8000/partner1",
+		2: "http://host.docker.internal:8000/partner2",
 	}
 
 	listEventsUseCase := usecase.NewListEventsUseCase(eventRepo)

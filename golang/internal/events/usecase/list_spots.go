@@ -1,6 +1,6 @@
 package usecase
 
-import "golang/internal/events/domain"
+import "github.com/devfullcycle/imersao18/golang/internal/events/domain"
 
 type ListSpotsInputDTO struct {
 	EventID string `json:"event_id"`

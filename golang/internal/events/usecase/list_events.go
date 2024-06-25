@@ -1,6 +1,8 @@
 package usecase
 
-import "golang/internal/events/domain"
+import (
+	"github.com/devfullcycle/imersao18/golang/internal/events/domain"
+)
 
 type ListEventsOutputDTO struct {
 	Events []EventDTO `json:"events"`
@@ -45,6 +47,7 @@ func (uc *ListEventsUseCase) Execute() (*ListEventsOutputDTO, error) {
 			Capacity:     event.Capacity,
 			Price:        event.Price,
 			PartnerID:    event.PartnerID,
+			ImageURL:     event.ImageURL,
 		}
 	}
 
